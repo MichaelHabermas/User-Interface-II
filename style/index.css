@@ -2,6 +2,7 @@
 	margin: 0;
 	padding: 0;
 	border: 0;
+	/* border: 2px solid grey; */
 	font-size: 62.5%;
 	font: inherit;
 	vertical-align: baseline;
@@ -13,6 +14,10 @@
 
 /* GENERAL */
 
+body * {
+	margin-bottom: 3%;
+}
+
 h2 {
 	font-size: 1.5rem;
 }
@@ -21,18 +26,32 @@ a {
 	text-decoration: none;
 }
 
+p {
+	width: 45ch;
+	margin: 0 auto;
+	line-height: 2rem;
+}
+
 /* HEADER */
 
 header {
 	display: flex;
 	justify-content: space-between;
 	width: 90%;
+	margin-bottom: 0;
 	margin: 1% auto 0;
 }
 
+.title {
+}
+
 .title h2 {
+	display: flex;
+	font-size: 2rem;
 	color: #3f3939;
 	background-color: white;
+	justify-content: center;
+	align-items: center;
 	transition: all 0.3s ease-in-out;
 }
 .title h2:hover {
@@ -48,34 +67,36 @@ header nav {
 }
 
 .button {
-	padding: 2px;
+	padding: 0 1rem;
+	height: 70%;
 	width: 15rem;
 	border: 1px solid #3f3939;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	transition: all 0.3s ease-in-out;
+	margin-bottom: 0;
 }
 
-.button:hover {
+.button:hover,
+main a h2:hover {
 	background-color: #3f3939;
 	color: white;
 }
 
 /* BODY */
-main * {
-	transition: all 0.3s ease-in-out;
-}
 
 main {
 	background-image: url('https://images.unsplash.com/photo-1615366105533-5b8f3255ea5d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1647&q=80');
-	/* display: flex; */
 	width: 80%;
 	padding: 12rem 0;
-	margin: 5% auto;
+	margin: 0 auto 5%;
 	text-align: center;
 	background-position: center;
-	/* overflow: hidden; */
+}
+
+main img {
+	display: none;
 }
 
 h1 {
@@ -91,63 +112,230 @@ main h2 {
 	text-shadow: 2px 2px 0 white;
 }
 
+main p {
+	display: none;
+}
+
 /* PHOTO GALLERY */
 
 .gallery {
 	display: flex;
-	flex-direction: row;
+	/* flex-direction: row; */
 	flex-wrap: wrap;
-	margin: 0 0 15%;
+	margin: 0 5% 5%;
 	text-align: center;
 	justify-content: space-between;
 }
 
-.top_row,
-.bottom_row {
-	display: flex;
-	justify-content: space-around;
-}
-
-.top_row {
-	margin-bottom: 2%;
-}
-
 .image {
-	width: 25%;
-}
-
-.image img {
-	width: 100%;
+	width: 30%;
+	/* border: 2px solid yellow; */
+	margin-bottom: 3%;
 }
 
 /* FOOTER  */
+
+footer * {
+	line-height: 1;
+}
+
 footer {
+	margin: 0;
+	padding: 0;
+}
+
+.desktop_footer {
 	display: flex;
 	background: #bada55;
 	width: 100%;
 	justify-content: space-between;
-	padding: 2%;
-	/* position: fixed; */
-	bottom: 0;
+	font-size: 1.5rem;
+	padding: 2% 0 0 0;
+	margin: 0;
 }
 
-footer nav {
+.desktop_footer nav {
 	display: flex;
-	justify-content: space-between;
+	/* justify-content: space-between; */
+}
+
+.desktop_footer nav a {
+	margin-right: 10%;
+}
+
+.copyright {
 	margin-right: 5%;
 }
 
-footer nav a {
-	margin-right: 5%;
+.copyright p {
+	display: flex;
+	justify-content: flex-end;
+	width: auto;
 }
 
-.foot-contact {
-	padding: 1rem 1.5rem;
-	margin: 2rem 0;
-	border-radius: 10px;
-	font-size: 1rem;
-	background-color: white;
-}
 .social {
-	display: flex;
+	margin: 0 0 0 5%;
+}
+
+.mobile_footer {
+	display: none;
+}
+
+/* 			******************* TABLET CHANGE ******************** 			*/
+
+@media screen and (max-width: 800px) {
+	/* GENERAL */
+
+	h2 {
+		font-size: 1.5rem;
+		text-align: center;
+	}
+
+	/* HEADER */
+
+	header * {
+		/* border: 1px solid #3f3939; */
+	}
+
+	header {
+		flex-direction: column; /**/
+		align-items: center; /**/
+		margin: 2% auto 5&;
+	}
+
+	.title h2 {
+		font-size: 3rem;
+	}
+
+	.title {
+		margin: 0;
+	}
+
+	header nav {
+		flex-direction: column; /**/
+		align-items: center; /**/
+		width: 100%;
+	}
+
+	.button {
+		padding: 5px 10px;
+		width: 10rem;
+		border: 2px solid #3f3939;
+		align-items: center;
+		justify-content: center;
+		font-size: 1.5rem;
+	}
+
+	/* BODY */
+
+	main {
+		background-image: none;
+		width: 90%;
+		padding: 0;
+	}
+
+	main img {
+		display: block;
+	}
+
+	main a h2 {
+		padding: 5px 10px;
+		width: 10rem;
+		border: 2px solid #3f3939;
+		margin: 0 auto 5%;
+		font-size: 1.5rem;
+	}
+
+	h1 {
+		font-size: 4rem;
+		text-align: center;
+		text-shadow: 2px 2px 0 white;
+		letter-spacing: -0.1rem;
+		line-height: 3.5rem;
+		margin-top: 5%;
+	}
+
+	main h2 {
+		text-shadow: 2px 2px 0 white;
+	}
+
+	main p {
+		display: block;
+	}
+
+	/* PHOTO GALLERY */
+
+	.gallery {
+		display: flex;
+		/* flex-direction: row; */
+		flex-wrap: wrap;
+		/* margin: 0 5%; */
+		text-align: center;
+		justify-content: space-between;
+	}
+
+	.image {
+		width: 47%;
+		/* border: 2px solid yellow; */
+		margin-bottom: 3%;
+	}
+
+	/* FOOTER  */
+
+	.desktop_footer {
+		display: none;
+	}
+
+	footer {
+		display: flex;
+		background: #bada55;
+		width: 100%;
+		justify-content: space-between;
+		padding: 2% 0;
+	}
+
+	.mobile_footer {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin: 0 auto;
+	}
+	.mobile_footer * {
+		margin-bottom: 5%;
+	}
+
+	.mobile_footer .social {
+		font-size: 2rem;
+		margin-bottom: 4%;
+	}
+
+	.mobile_footer h2 {
+		padding-top: 5%;
+	}
+
+	.mobile_footer h2,
+	.mobile_contact {
+		font-size: 1.5rem;
+	}
+
+	.mobile_contact {
+		border: 2px solid;
+		padding: 2% 4%;
+	}
+
+	.social {
+		margin: 0;
+	}
+}
+
+/* 			******************* Smartphone Change ******************** 			*/
+
+@media screen and (max-width: 500px) {
+	.gallery {
+	}
+	.image {
+		width: 80%;
+		margin: 0 auto;
+	}
 }
