@@ -11,12 +11,6 @@
 	max-width: 100%;
 }
 
-/* GENERAL */
-
-body * {
-	margin-bottom: 3%;
-}
-
 h2 {
 	font-size: 1.5rem;
 }
@@ -73,8 +67,7 @@ header nav {
 	margin-bottom: 0;
 }
 
-.button:hover,
-main a h2:hover {
+.button:hover {
 	background-color: #3f3939;
 	color: white;
 }
@@ -84,10 +77,15 @@ main a h2:hover {
 main {
 	background-image: url('https://images.unsplash.com/photo-1615366105533-5b8f3255ea5d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1647&q=80');
 	width: 80%;
-	padding: 12rem 0;
-	margin: 0 auto 5%;
+	height: 70vh;
+	/* padding: 12rem 0; */
+	margin: 3% auto;
 	text-align: center;
 	background-position: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 main img {
@@ -95,15 +93,17 @@ main img {
 }
 
 h1 {
-	font-size: 4rem;
+	font-size: 5rem;
 	text-align: center;
 	text-shadow: 2px 2px 0 white;
 	letter-spacing: -0.1rem;
 	line-height: 4rem;
+	margin: 1% 0;
 }
 
-main h2 {
+main a {
 	text-shadow: 2px 2px 0 white;
+	font-size: 2rem;
 }
 
 main p {
@@ -127,45 +127,29 @@ main p {
 
 /* FOOTER  */
 
-footer * {
-	line-height: 1;
-}
-
-footer {
-	margin: 0;
-	padding: 0;
-}
-
 .desktop_footer {
 	display: flex;
 	background: #bada55;
 	width: 100%;
 	justify-content: space-between;
+	align-items: center;
 	font-size: 1.5rem;
-	padding: 2% 0 0 0;
-	margin: 0;
+	padding: 1% 0;
 }
 
 .desktop_footer nav {
 	display: flex;
+	margin-left: 5%;
 }
 
 .desktop_footer nav a {
-	margin-right: 10%;
+	margin-right: 25%;
+	font-size: 2rem;
 }
 
 .copyright {
 	margin-right: 5%;
-}
-
-.copyright p {
-	display: flex;
-	justify-content: flex-end;
-	width: auto;
-}
-
-.social {
-	margin: 0 0 0 5%;
+	font-size: 2rem;
 }
 
 .mobile_footer {
@@ -271,11 +255,10 @@ footer {
 	}
 
 	footer {
-		display: flex;
+		/* display: flex; */
 		background: #bada55;
-		width: 100%;
-		justify-content: space-between;
-		padding: 2% 0;
+		/* width: 100%; */
+		/* justify-content: space-between; */
 	}
 
 	.mobile_footer {
@@ -327,5 +310,22 @@ footer {
 
 	.desktop_footer {
 		display: none;
+	}
+	/* .projects_button {
+		transition: all 0.3s ease-in-out;
+	} */
+
+	main .projects_button {
+		border: 1px solid #3f3939;
+		text-shadow: none;
+		font-size: 1.5rem;
+		padding: 0 1rem;
+		height: 70%;
+		width: 15rem;
+	}
+
+	main a:hover {
+		background-color: #3f3939;
+		color: white;
 	}
 }
