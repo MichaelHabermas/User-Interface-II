@@ -2,7 +2,6 @@
 	margin: 0;
 	padding: 0;
 	border: 0;
-	/* border: 2px solid grey; */
 	font-size: 62.5%;
 	font: inherit;
 	vertical-align: baseline;
@@ -42,9 +41,6 @@ header {
 	margin: 1% auto 0;
 }
 
-.title {
-}
-
 .title h2 {
 	display: flex;
 	font-size: 2rem;
@@ -55,7 +51,6 @@ header {
 	transition: all 0.3s ease-in-out;
 }
 .title h2:hover {
-	/* background-color: #3f3939; */
 	color: rgb(244, 237, 237);
 	text-shadow: 2px 2px 0 #3f3939;
 }
@@ -105,7 +100,6 @@ h1 {
 	text-shadow: 2px 2px 0 white;
 	letter-spacing: -0.1rem;
 	line-height: 4rem;
-	/* width: 100%; */
 }
 
 main h2 {
@@ -120,7 +114,6 @@ main p {
 
 .gallery {
 	display: flex;
-	/* flex-direction: row; */
 	flex-wrap: wrap;
 	margin: 0 5% 5%;
 	text-align: center;
@@ -129,7 +122,6 @@ main p {
 
 .image {
 	width: 30%;
-	/* border: 2px solid yellow; */
 	margin-bottom: 3%;
 }
 
@@ -156,7 +148,6 @@ footer {
 
 .desktop_footer nav {
 	display: flex;
-	/* justify-content: space-between; */
 }
 
 .desktop_footer nav a {
@@ -193,14 +184,10 @@ footer {
 
 	/* HEADER */
 
-	header * {
-		/* border: 1px solid #3f3939; */
-	}
-
 	header {
 		flex-direction: column; /**/
 		align-items: center; /**/
-		margin: 2% auto 5&;
+		margin: 2% auto 5%;
 	}
 
 	.title h2 {
@@ -267,16 +254,13 @@ footer {
 
 	.gallery {
 		display: flex;
-		/* flex-direction: row; */
 		flex-wrap: wrap;
-		/* margin: 0 5%; */
 		text-align: center;
 		justify-content: space-between;
 	}
 
 	.image {
 		width: 47%;
-		/* border: 2px solid yellow; */
 		margin-bottom: 3%;
 	}
 
@@ -332,10 +316,16 @@ footer {
 /* 			******************* Smartphone Change ******************** 			*/
 
 @media screen and (max-width: 500px) {
-	.gallery {
-	}
 	.image {
 		width: 80%;
 		margin: 0 auto;
+	}
+
+	.mobile_footer {
+		display: block;
+	}
+
+	.desktop_footer {
+		display: none;
 	}
 }
