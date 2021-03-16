@@ -101,6 +101,10 @@ h1 {
 	margin: 1% 0;
 }
 
+h4 {
+	font-size: 2rem;
+}
+
 main a {
 	text-shadow: 2px 2px 0 white;
 	font-size: 2rem;
@@ -157,6 +161,17 @@ main p {
 }
 
 /* 			******************* TABLET CHANGE ******************** 			*/
+
+@media screen and (max-width: 1000px) {
+	h4 {
+		font-size: 1.5rem;
+	}
+
+	.desktop_footer nav a,
+	.copyright {
+		font-size: 1.5rem;
+	}
+}
 
 @media screen and (max-width: 800px) {
 	/* GENERAL */
@@ -304,17 +319,6 @@ main p {
 		margin: 0 auto;
 	}
 
-	.mobile_footer {
-		display: block;
-	}
-
-	.desktop_footer {
-		display: none;
-	}
-	/* .projects_button {
-		transition: all 0.3s ease-in-out;
-	} */
-
 	main .projects_button {
 		border: 1px solid #3f3939;
 		text-shadow: none;
@@ -328,4 +332,28 @@ main p {
 		background-color: #3f3939;
 		color: white;
 	}
+
+	.desktop_footer {
+		display: none;
+	}
+
+	.mobile_footer {
+		display: block;
+	}
+
+	footer * {
+		border: 1px solid #3f3939;
+	}
+
+	.mobile_footer h2,
+	.mobile_footer .social,
+	.mobile_footer .social a,
+	.mobile_footer a {
+		margin: 0 auto;
+		padding: 0;
+	}
+
+	/* .projects_button {
+		transition: all 0.3s ease-in-out;
+	} */
 }
